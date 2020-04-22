@@ -32,7 +32,6 @@ public class SlotController : MonoBehaviour
             }
         }
 
-
         if (Found == false)
         {
             for (int N = 0; N < 99; N++)

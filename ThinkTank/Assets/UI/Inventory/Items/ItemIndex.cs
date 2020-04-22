@@ -6,6 +6,9 @@ public abstract class Item
 {
     public int Amount;
 
+    public Sprite IconS;
+    public Sprite IconL;
+
     public abstract Sprite GetIcon();
 
     public abstract bool IsStackable();
@@ -13,6 +16,9 @@ public abstract class Item
 
 public class ItemIndex : MonoBehaviour
 {
+
+    public Sprite[] SmallIcon1;
+    public Sprite LargeIcon1;
 
     public Sprite RequestIcon()
     {

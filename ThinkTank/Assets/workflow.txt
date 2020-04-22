@@ -10,6 +10,7 @@ quests
 item popups
 items
 
+i need to learn about structs
 
 	bugs/im not smart enough to do
 cant get boolhavior to auto initiate
@@ -20,3 +21,6 @@ GR8!
 	remember
 update other scenes with nessecary building blocks
 keep shit short/find a way to maby shorten the talkto/object behavior scripts for simplicity
+
+serializefield to show pricate variables
+hideininspector to hide public ones
