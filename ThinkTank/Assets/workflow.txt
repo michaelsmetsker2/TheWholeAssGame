@@ -1,6 +1,5 @@
 	features
 
-update slot initialization via foreach loop
 order feature list
 money ui
 make so npc remember you

@@ -18,7 +18,7 @@ public class SlotController : MonoBehaviour
         {
             if (SlotId[F] == Aquired)
             {
-                if (Aquired.IsStackable())
+                if (Aquired.IsStackable)
                 {
                     Aquired.Amount++;
                 }

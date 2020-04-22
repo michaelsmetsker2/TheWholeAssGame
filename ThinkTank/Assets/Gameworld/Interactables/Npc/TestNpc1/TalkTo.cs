@@ -31,6 +31,11 @@ public class TalkTo : MonoBehaviour
     //not acceptde quest
     public TalkBlock TBlock3;
 
+    public SlotController SlotController;
+
+    public Item Given;
+
+
     public void Initiate()
     {
         switch (TalkState)
@@ -96,7 +101,8 @@ public class TalkTo : MonoBehaviour
 
         if (Answer == 1) //option one
         {
-            //give quest
+            //give item
+            SlotController.NewItem(Given);
             TalkState = 2;
             Exit();
         }
