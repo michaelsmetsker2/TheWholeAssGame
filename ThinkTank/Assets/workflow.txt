@@ -1,0 +1,22 @@
+	features
+
+update slot initialization via foreach loop
+order feature list
+money ui
+make so npc remember you
+interactions
+inventory
+quests
+item popups
+items
+
+
+	bugs/im not smart enough to do
+cant get boolhavior to auto initiate
+
+	optimization
+GR8!
+
+	remember
+update other scenes with nessecary building blocks
+keep shit short/find a way to maby shorten the talkto/object behavior scripts for simplicity
