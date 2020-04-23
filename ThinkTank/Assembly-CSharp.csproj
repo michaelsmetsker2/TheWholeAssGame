@@ -84,6 +84,7 @@
     <Compile Include="Assets\UI\Inventory\ItemInteract.cs" />
     <Compile Include="Assets\UI\Inventory\Items\Item.cs" />
     <Compile Include="Assets\UI\Inventory\ItemSlot.cs" />
+    <Compile Include="Assets\UI\SelectedInfo.cs" />
     <None Include="Assets\workflow.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/micha/OneDrive/Documents/GitHub/TheWholeAssGame/ThinkTank/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

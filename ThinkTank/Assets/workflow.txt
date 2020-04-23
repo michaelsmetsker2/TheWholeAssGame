@@ -1,5 +1,6 @@
 	features
 
+change objects/npc to scriptable objects if i can if not then shorten down code
 
 change boolhavior/testnpc talkto
 order feature list

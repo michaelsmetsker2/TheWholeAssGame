@@ -16,6 +16,8 @@ public class ItemSlot : MonoBehaviour
     //if the slot is holding an item
     private bool Empty = true;
 
+    public SelectedInfo SelectedInfo;
+
     private void OnEnable()
     {
         if (SlotController.SlotId[SlotNumber] != null)
@@ -58,8 +60,9 @@ public class ItemSlot : MonoBehaviour
             ItemMenu.StartInteract(SlotNumber);
 
             //now show big iccon
-            
+
             //now show item desxription
+            SelectedInfo.DisplayInfo(SlotController.SlotId[SlotNumber].Description);
         }
     }
 }

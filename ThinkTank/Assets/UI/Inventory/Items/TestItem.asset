@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17cc164cfe6723d448ae09e144f7d1a4, type: 3}
   m_Name: TestItem
   m_EditorClassIdentifier: 
-  Name: TestItem
-  Description: desc
+  Description: brode sode is the best thing about hero quest
   IconS: {fileID: 21300000, guid: 799b04ea61ffa4b4883b8fbbe948badf, type: 3}
   IconL: {fileID: 0}
   Amount: 1
-  IsStackable: 0
