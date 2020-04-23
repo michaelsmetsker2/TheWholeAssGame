@@ -1,5 +1,7 @@
 	features
 
+
+change boolhavior/testnpc talkto
 order feature list
 money ui
 make so npc remember you

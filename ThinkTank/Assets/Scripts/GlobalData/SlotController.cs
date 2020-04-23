@@ -18,15 +18,7 @@ public class SlotController : MonoBehaviour
         {
             if (SlotId[F] == Aquired)
             {
-                if (Aquired.IsStackable)
-                {
-                    Aquired.Amount++;
-                }
-                else
-                {
-                    //go bring up some dialogue that says hey you dont need more than one of these
-                    Debug.LogError("dammit michael you forgot to put this in");
-                }
+                Aquired.Amount++;
                 Found = true;
                 break;
             }
@@ -44,10 +36,4 @@ public class SlotController : MonoBehaviour
             }
         }
     }
-
-    public void SwapItem()
-    {
-        //make sure to also swap item amounts
-    }
-
 }

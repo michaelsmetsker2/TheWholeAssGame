@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ItemSlot : MonoBehaviour
 {
+    public ItemInteract ItemMenu;
     public SlotController SlotController;
     public Image IconS;
     public Text AmountBox;
@@ -43,16 +44,22 @@ public class ItemSlot : MonoBehaviour
         }
     }
 
+    //for changing the slots icons and shit whilst the menu is still open
     public void UpdateSlot()
     {
-
+        //put stuff here
     }
 
     public void Select()
     {
         if (Empty == false)
         {
+            ItemMenu.gameObject.SetActive(true);
+            ItemMenu.StartInteract(SlotNumber);
 
+            //now show big iccon
+            
+            //now show item desxription
         }
     }
 }

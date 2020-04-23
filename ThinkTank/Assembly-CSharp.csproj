@@ -81,6 +81,7 @@
     <Compile Include="Assets\UI\Dialogue\TalkBlock.cs" />
     <Compile Include="Assets\UI\GameMenu.cs" />
     <Compile Include="Assets\UI\InteractionManager.cs" />
+    <Compile Include="Assets\UI\Inventory\ItemInteract.cs" />
     <Compile Include="Assets\UI\Inventory\Items\Item.cs" />
     <Compile Include="Assets\UI\Inventory\ItemSlot.cs" />
     <None Include="Assets\workflow.txt" />

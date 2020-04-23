@@ -13,6 +13,4 @@ public class Item : ScriptableObject
 
     public int Amount;
 
-    public bool IsStackable;
-
 }
