@@ -67,6 +67,9 @@
     <Compile Include="Assets\Gameworld\Interactables\Npc\TestNpc1\OnItem.cs" />
     <Compile Include="Assets\Gameworld\Interactables\Npc\TestNpc1\OnUse.cs" />
     <Compile Include="Assets\Gameworld\Interactables\Npc\TestNpc1\TalkTo.cs" />
+    <Compile Include="Assets\Gameworld\Items\Item.cs" />
+    <Compile Include="Assets\Gameworld\Quests\Quest.cs" />
+    <Compile Include="Assets\Gameworld\Quests\Reward.cs" />
     <Compile Include="Assets\Player\Scripts\DataState.cs" />
     <Compile Include="Assets\Player\Scripts\Interactables.cs" />
     <Compile Include="Assets\Player\Scripts\PlayerMovement.cs" />
@@ -75,16 +78,15 @@
     <Compile Include="Assets\Scripts\GlobalData\QuestData.cs" />
     <Compile Include="Assets\Scripts\GlobalData\SlotController.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
-    <Compile Include="Assets\UI\Dialogue\ChoiceMenu\ChoiceBlock.cs" />
-    <Compile Include="Assets\UI\Dialogue\ChoiceMenu\ChoiceManager.cs" />
+    <Compile Include="Assets\UI\ChoiceMenu\ChoiceBlock.cs" />
+    <Compile Include="Assets\UI\ChoiceMenu\ChoiceManager.cs" />
     <Compile Include="Assets\UI\Dialogue\DialogueManager.cs" />
     <Compile Include="Assets\UI\Dialogue\TalkBlock.cs" />
-    <Compile Include="Assets\UI\GameMenu.cs" />
-    <Compile Include="Assets\UI\InteractionManager.cs" />
-    <Compile Include="Assets\UI\Inventory\ItemInteract.cs" />
-    <Compile Include="Assets\UI\Inventory\Items\Item.cs" />
-    <Compile Include="Assets\UI\Inventory\ItemSlot.cs" />
-    <Compile Include="Assets\UI\SelectedInfo.cs" />
+    <Compile Include="Assets\UI\E Menu\GameMenu.cs" />
+    <Compile Include="Assets\UI\E Menu\InteractionManager.cs" />
+    <Compile Include="Assets\UI\E Menu\Inventory\ItemInteract.cs" />
+    <Compile Include="Assets\UI\E Menu\Inventory\ItemSlot.cs" />
+    <Compile Include="Assets\UI\E Menu\SelectedInfo.cs" />
     <None Include="Assets\workflow.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/micha/OneDrive/Documents/GitHub/TheWholeAssGame/ThinkTank/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

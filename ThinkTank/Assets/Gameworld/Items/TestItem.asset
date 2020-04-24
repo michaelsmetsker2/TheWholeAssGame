@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17cc164cfe6723d448ae09e144f7d1a4, type: 3}
+  m_Name: TestItem
+  m_EditorClassIdentifier: 
+  Description: brode sode is the best thing about hero quest
+  IconS: {fileID: 21300000, guid: 799b04ea61ffa4b4883b8fbbe948badf, type: 3}
+  IconL: {fileID: 0}
+  Amount: 1
