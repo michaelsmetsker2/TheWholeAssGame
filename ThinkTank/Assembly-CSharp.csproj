@@ -69,7 +69,6 @@
     <Compile Include="Assets\Gameworld\Interactables\Npc\TestNpc1\TalkTo.cs" />
     <Compile Include="Assets\Gameworld\Items\Item.cs" />
     <Compile Include="Assets\Gameworld\Quests\Quest.cs" />
-    <Compile Include="Assets\Gameworld\Quests\Reward.cs" />
     <Compile Include="Assets\Player\Scripts\DataState.cs" />
     <Compile Include="Assets\Player\Scripts\Interactables.cs" />
     <Compile Include="Assets\Player\Scripts\PlayerMovement.cs" />

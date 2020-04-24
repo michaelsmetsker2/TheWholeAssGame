@@ -15,5 +15,6 @@ public class Quest : ScriptableObject
     //0 == not started 1 == in progress 2 == completed
     public int Status;
 
-    public Reward TQL;
+    //add rewards heres
+    // As a one of possible solutions your rewards could be just one serializable class object which would be configurable and will be parsed by the manager.
 }
