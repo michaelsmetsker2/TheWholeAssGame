@@ -67,7 +67,8 @@
     <Compile Include="Assets\Gameworld\Interactables\Npc\TestNpc1\OnItem.cs" />
     <Compile Include="Assets\Gameworld\Interactables\Npc\TestNpc1\OnUse.cs" />
     <Compile Include="Assets\Gameworld\Interactables\Npc\TestNpc1\TalkTo.cs" />
-    <Compile Include="Assets\Gameworld\Items\Item.cs" />
+    <Compile Include="Assets\Gameworld\Items\Scrpts\Item.cs" />
+    <Compile Include="Assets\Gameworld\Items\Scrpts\UselessItem.cs" />
     <Compile Include="Assets\Gameworld\Quests\Goal.cs" />
     <Compile Include="Assets\Gameworld\Quests\ItemGoal.cs" />
     <Compile Include="Assets\Gameworld\Quests\Quest.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\Scripts\GlobalData\QuestController.cs" />
     <Compile Include="Assets\Scripts\GlobalData\SlotController.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
+    <Compile Include="Assets\UI\CanvasSingleton.cs" />
     <Compile Include="Assets\UI\ChoiceMenu\ChoiceBlock.cs" />
     <Compile Include="Assets\UI\ChoiceMenu\ChoiceManager.cs" />
     <Compile Include="Assets\UI\Dialogue\DialogueManager.cs" />
@@ -87,7 +89,7 @@
     <Compile Include="Assets\UI\E Menu\InteractionManager.cs" />
     <Compile Include="Assets\UI\E Menu\Inventory\ItemInteract.cs" />
     <Compile Include="Assets\UI\E Menu\Inventory\ItemSlot.cs" />
-    <Compile Include="Assets\UI\E Menu\SelectedInfo.cs" />
+    <Compile Include="Assets\UI\E Menu\UiSelected.cs" />
     <None Include="Assets\workflow.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/micha/OneDrive/Documents/GitHub/TheWholeAssGame/ThinkTank/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SlotController : MonoBehaviour
 {
+    #region singleton
     public static SlotController Instance;
     void Awake()    //this makes sure that there can only be one existance of it aka dont fuck with it
     {
@@ -17,37 +18,44 @@ public class SlotController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    #endregion
 
-    public Item[] SlotId = new Item[99];
+    public Item[] SlotID = new Item[99];
 
-    //if an existing instance of the item is already found in the inventory
-    private bool Found = false;
+    private int LowestNull = 0;
+
 
     //when a new item is picked up
+
+    //i should probably add something here for quest goal updating
+    
     public void NewItem(Item Aquired)
     {
-        Found = false;
+
+        Debug.LogError("IM TIRED MICHAEL FIX AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+        SlotID[0] = Aquired;
+        /*
+        LowestNull = -1;
 
         for (int F = 0; F < 99; F++)
         {
-            if (SlotId[F] == Aquired)
+
+            if (SlotID[F] == null && LowestNull == -1)
+            {
+                LowestNull = F;
+            }
+
+            if (SlotID[F] == Aquired)
             {
                 Aquired.Amount++;
-                Found = true;
                 break;
             }
-        }
 
-        if (Found == false)
-        {
-            for (int N = 0; N < 99; N++)
+            if (F == 99)
             {
-                if (SlotId[N] == null)
-                {
-                    SlotId[N] = Aquired;
-                    break;
-                }
+                SlotID[LowestNull] = Aquired;
+                break;
             }
-        }
+        }*/
     }
 }

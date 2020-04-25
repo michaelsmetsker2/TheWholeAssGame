@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ItemInteract : MonoBehaviour
 {
-    public SelectedInfo SelectedInfo;
+    //public SelectedInfo SelectedInfo;
 
 
     private int CalledFrom;
@@ -18,7 +18,7 @@ public class ItemInteract : MonoBehaviour
 
     public void EndInteract()
     {
-        SelectedInfo.DisplayInfo(null);
+        //SelectedInfo.DisplayInfo(null);
         this.gameObject.SetActive(false);
     }
 }

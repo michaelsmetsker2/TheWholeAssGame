@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class ItemSlot : MonoBehaviour
 {
-    public ItemInteract ItemMenu;
     public SlotController SlotController;
+
+    public ItemInteract ItemMenu;
     public Image IconS;
     public Text AmountBox;
 
@@ -16,22 +17,20 @@ public class ItemSlot : MonoBehaviour
     //if the slot is holding an item
     private bool Empty = true;
 
-    public SelectedInfo SelectedInfo;
-
     private void OnEnable()
     {
-        if (SlotController.SlotId[SlotNumber] != null)
+        if (SlotController.SlotID[SlotNumber] != null)
         {
             Empty = false;
 
             //setting the icon
             IconS.gameObject.SetActive(true);
-            IconS.sprite = SlotController.SlotId[SlotNumber].IconS;
+            IconS.sprite = SlotController.SlotID[SlotNumber].IconS;
             
             //setting the amount
-            if (SlotController.SlotId[SlotNumber].Amount != 1)
+            if (SlotController.Instance.SlotID[SlotNumber].Amount != 1)
             {
-                AmountBox.text = "X" + SlotController.SlotId[SlotNumber].Amount;
+                AmountBox.text = "X" + SlotController.SlotID[SlotNumber].Amount;
             }
             else
             {
@@ -56,13 +55,7 @@ public class ItemSlot : MonoBehaviour
     {
         if (Empty == false)
         {
-            ItemMenu.gameObject.SetActive(true);
-            ItemMenu.StartInteract(SlotNumber);
-
-            //now show big iccon
-
-            //now show item desxription
-            SelectedInfo.DisplayInfo(SlotController.SlotId[SlotNumber].Description);
+            UiSelected.Instance.SelectItem(SlotController.SlotID[SlotNumber]);
         }
     }
 }

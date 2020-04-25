@@ -9,7 +9,7 @@ public class TestQuest : Quest
         QuestName = "TestQuest";
         Description = "This is a test for quests";
 
-        Goals.Add(ItemGoal("TestItem", "get a testitem", false, 0, 1));
+        Goals.Add(new ItemGoal("TestItem", "get a testitem", false, 0, 1));
 
         Goals.ForEach(g => g.Init());
     }
