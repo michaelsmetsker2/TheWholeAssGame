@@ -1,20 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
-[CreateAssetMenu(fileName = "New Quest", menuName = "Quest")]
-public class Quest : ScriptableObject
+public class Quest : MonoBehaviour
 {
+    public List<Goal> Goals;
+    public string QuestName;
+    public string Description;
+    public int MoneyReward;
+    public Item ItemReward;
+    public bool Completed;
 
-    //the name of the quest
-    public string Name;
+    private void Start()
+    {
+        Goals = new List<Goal>();
+    }
 
-    //if steps have to be completed in order
-    public bool IsLinear;
+    public void CheckGoals()
+    {
+        if (Goals.All(g => g.Completed))
+        {
+            Completed = true;
+            GiveReward();
+        }
+    }
 
-    //0 == not started 1 == in progress 2 == completed
-    public int Status;
-
-    //add rewards heres
-    // As a one of possible solutions your rewards could be just one serializable class object which would be configurable and will be parsed by the manager.
+    void GiveReward()
+    {
+        if (ItemReward != null)
+        {
+            //give item
+        }
+    }
 }

@@ -1,6 +1,6 @@
 	features
 
-figure out how to do quest rewards
+figure out how to do quest rewards	
 
 change objects/npc to scriptable objects if i can if not then shorten down code
 
@@ -28,3 +28,8 @@ keep shit short/find a way to maby shorten the talkto/object behavior scripts fo
 
 serializefield to show pricate variables
 hideininspector to hide public ones
+
+inheritance is cool 
+	need to do shit with that
+
+enums are cool

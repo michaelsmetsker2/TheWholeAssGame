@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class SlotController : MonoBehaviour
 {
+    public static SlotController Instance;
+    void Awake()    //this makes sure that there can only be one existance of it aka dont fuck with it
+    {
+        if (Instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public Item[] SlotId = new Item[99];
 
     //if an existing instance of the item is already found in the inventory
