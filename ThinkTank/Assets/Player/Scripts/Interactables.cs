@@ -4,37 +4,25 @@ using UnityEngine;
 
 public class Interactables : MonoBehaviour
 {
-    //The interact menu's script and object
+    //The interact menu
     public InteractionManager InteractMenu;
-    public GameObject MenuObject;
 
     public GameObject FButton;
 
-    //the object that is being interacted with
-    private TalkTo TalkBehavior;
-    private OnUse UseBehavior;
-    private OnItem ItemReactions;
-    //ect
-
-    //dialogue ui link
-    public GameObject TalkBox;
-    //DialogueManager
-    public DialogueManager TManager;
-
+    public GameObject InteractObject;
+    private InteractBehaviors InteractBehaviors;
 
     private void Start()
     {
-        //saves computing power
+        //so it only tests for an f press while in range of an interactable
         enabled = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Interactable")
+        if (other.gameObject.CompareTag("Interactable"))
         {
-            TalkBehavior = other.gameObject.GetComponent<TalkTo>();
-            //and the others <3
-
+            InteractObject = other.gameObject;
             FButton.SetActive(true);
             enabled = true;
         }
@@ -42,7 +30,7 @@ public class Interactables : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Interactable")
+        if (other.gameObject.CompareTag("Interactable"))
         {
             FButton.SetActive(false);
             enabled = false;
@@ -55,38 +43,27 @@ public class Interactables : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F)&& Time.timeScale == 1f)
         {
             Time.timeScale = 0f;
-            MenuObject.SetActive(true);
-            StartCoroutine(InteractMenu.GetPress());
+            InteractMenu.gameObject.SetActive(true);
+            StartCoroutine (GetPress());
         }
     }
 
-    //determines press
-    public void DeterminePress(int InteractType)
+    public IEnumerator GetPress()
     {
-        switch (InteractType)
+        yield return new WaitUntil(() => InteractMenu.PressId != 0);
+
+        Debug.LogWarning("this could probably be more efficient");
+
+        if (InteractMenu.PressId == 4)
         {
-            case 1: //talk
-                {
-                    MenuObject.SetActive(false);
-                    TalkBehavior.Initiate();
-                    break;
-                }
-            case 2: //item
-                {
-                    MenuObject.SetActive(false);
-                    break;
-                }
-            case 3: //use
-                {
-                    MenuObject.SetActive(false);
-                    break;
-                }
-            case 4: //exit
-                {
-                    MenuObject.SetActive(false);
-                    Time.timeScale = 1f;
-                    break;
-                }
+            InteractMenu.gameObject.SetActive(false);
+            Time.timeScale = 1f;
         }
+        else
+        {
+            InteractMenu.gameObject.SetActive(false);
+            InteractObject.gameObject.GetComponent<InteractBehaviors>().Actions(InteractMenu.PressId);
+        }
+        InteractMenu.ResetPress();
     }
 }

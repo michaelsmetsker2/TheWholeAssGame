@@ -5,14 +5,10 @@ using UnityEngine;
 public class InteractionManager : MonoBehaviour
 {
 
-    public Interactables Interactables;
+    public int PressId = 0;
 
-    private int PressId = 0;
-
-    public IEnumerator GetPress()
+    public void ResetPress()
     {
-        yield return new WaitUntil(() => PressId != 0);
-        Interactables.DeterminePress(PressId);
         PressId = 0;
     }
 

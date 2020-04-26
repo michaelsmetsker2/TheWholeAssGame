@@ -13,13 +13,18 @@ public class UiSelected : MonoBehaviour
     }
     #endregion
 
+    public ItemInteract ItemInteract;
+
     public Text Description;
     public Image LargeIcon;
 
     public void Clear()
     {
         Description.text = null;
-        //change largeIcon to map
+        ItemInteract.gameObject.SetActive(false);
+
+        Debug.Log("Hey put the map here instead of null, loser");
+        LargeIcon.sprite = null;
     }
 
     public void SelectItem(Item Selected)
@@ -27,6 +32,8 @@ public class UiSelected : MonoBehaviour
         Clear();
         Description.text = Selected.Description;
         LargeIcon.sprite = Selected.IconL;
+        ItemInteract.gameObject.SetActive(true);
+        ItemInteract.StartInteract(Selected);
 
     }
 

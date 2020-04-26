@@ -22,7 +22,8 @@ public class SlotController : MonoBehaviour
 
     public Item[] SlotID = new Item[99];
 
-    private int LowestNull = 0;
+
+    private bool Found;
 
 
     //when a new item is picked up
@@ -32,30 +33,29 @@ public class SlotController : MonoBehaviour
     public void NewItem(Item Aquired)
     {
 
-        Debug.LogError("IM TIRED MICHAEL FIX AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-        SlotID[0] = Aquired;
-        /*
-        LowestNull = -1;
+        Found = false;
 
         for (int F = 0; F < 99; F++)
         {
-
-            if (SlotID[F] == null && LowestNull == -1)
-            {
-                LowestNull = F;
-            }
-
             if (SlotID[F] == Aquired)
             {
-                Aquired.Amount++;
+                SlotID[F].Amount++;
+                Found = true;
                 break;
             }
+        }
 
-            if (F == 99)
+
+        if (Found == false)
+        {
+            for (int S = 0; S < 99; S++)
             {
-                SlotID[LowestNull] = Aquired;
-                break;
+                if (SlotID[S] == null)
+                {
+                    SlotID[S] = Aquired;
+                    break;
+                }
             }
-        }*/
+        }
     }
 }

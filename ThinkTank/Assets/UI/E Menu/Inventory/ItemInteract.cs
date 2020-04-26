@@ -5,20 +5,23 @@ using UnityEngine.UI;
 
 public class ItemInteract : MonoBehaviour
 {
-    //public SelectedInfo SelectedInfo;
+    public Item CurrentItem;
 
-
-    private int CalledFrom;
-
-
-    public void StartInteract(int SlotId)
+    public void StartInteract(Item Current)
     {
-        CalledFrom = SlotId;
+        CurrentItem = Current;
     }
+
+
+    public void Use()
+    {
+        Debug.Log("hey nice job clicking use on this useless item dipshit");
+    }
+
+    //maybe add swap method here?
 
     public void EndInteract()
     {
-        //SelectedInfo.DisplayInfo(null);
-        this.gameObject.SetActive(false);
+        UiSelected.Instance.Clear();
     }
 }

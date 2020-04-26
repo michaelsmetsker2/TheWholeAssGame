@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class ItemSlot : MonoBehaviour
 {
-    public SlotController SlotController;
-
-    public ItemInteract ItemMenu;
     public Image IconS;
     public Text AmountBox;
 
@@ -19,18 +16,18 @@ public class ItemSlot : MonoBehaviour
 
     private void OnEnable()
     {
-        if (SlotController.SlotID[SlotNumber] != null)
+        if (SlotController.Instance.SlotID[SlotNumber] != null)
         {
             Empty = false;
 
             //setting the icon
             IconS.gameObject.SetActive(true);
-            IconS.sprite = SlotController.SlotID[SlotNumber].IconS;
+            IconS.sprite = SlotController.Instance.SlotID[SlotNumber].IconS;
             
             //setting the amount
             if (SlotController.Instance.SlotID[SlotNumber].Amount != 1)
             {
-                AmountBox.text = "X" + SlotController.SlotID[SlotNumber].Amount;
+                AmountBox.text = "X" + SlotController.Instance.SlotID[SlotNumber].Amount;
             }
             else
             {
@@ -55,7 +52,7 @@ public class ItemSlot : MonoBehaviour
     {
         if (Empty == false)
         {
-            UiSelected.Instance.SelectItem(SlotController.SlotID[SlotNumber]);
+            UiSelected.Instance.SelectItem(SlotController.Instance.SlotID[SlotNumber]);
         }
     }
 }

@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Gameworld\Interactables\BoolHavier.cs" />
+    <Compile Include="Assets\Gameworld\Interactables\InteractBehaviors.cs" />
     <Compile Include="Assets\Gameworld\Interactables\Npc\TestNpc1\OnItem.cs" />
     <Compile Include="Assets\Gameworld\Interactables\Npc\TestNpc1\OnUse.cs" />
     <Compile Include="Assets\Gameworld\Interactables\Npc\TestNpc1\TalkTo.cs" />
