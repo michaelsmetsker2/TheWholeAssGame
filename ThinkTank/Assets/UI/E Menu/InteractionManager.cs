@@ -2,16 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//attached to the interactmenu ui object, values are changed when buttons are pressed
 public class InteractionManager : MonoBehaviour
 {
-
     public int PressId = 0;
-
-    public void ResetPress()
-    {
-        PressId = 0;
-    }
-
     public void Talk()
     {
         PressId = 1;
@@ -28,5 +22,4 @@ public class InteractionManager : MonoBehaviour
     {
         PressId = 4;
     }
-
 }
