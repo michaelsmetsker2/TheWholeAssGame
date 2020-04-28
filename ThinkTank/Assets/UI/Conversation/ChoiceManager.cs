@@ -21,7 +21,7 @@ public class ChoiceManager : MonoBehaviour
     public Text CText4;
 
 
-    public void StartChoice(int Options, ChoiceBlock Input)
+    public void StartChoice(int Options, TalkBlock Input)
     {
         Chosen = 0;
 
@@ -66,10 +66,10 @@ public class ChoiceManager : MonoBehaviour
                 }
         }
 
-        CText1.text = Input.Option1;
-        CText2.text = Input.Option2;
-        CText3.text = Input.Option3;
-        CText4.text = Input.Option4;
+        CText1.text = Input.Options[1];
+        CText2.text = Input.Options[2];
+        CText3.text = Input.Options[3];
+        CText4.text = Input.Options[4];
     }
 
     public void Select1()

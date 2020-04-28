@@ -3,8 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//NOTE need to set active from this so i dont have to define from each object
+
+
 public class DialogueManager : MonoBehaviour
 {
+
+    #region instance
+    public static DialogueManager Instance;
+    private void Awake()
+    {
+        Instance = this;
+    }
+    #endregion
+
     //linking the text boxes
     public Text NameText;
     public Text ConvoText;
@@ -23,7 +35,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartConvo(TalkBlock dialogue)
     {
-        Manners = true;
+
+
 
         //initialize the queue
         Sentences = new Queue<string>();

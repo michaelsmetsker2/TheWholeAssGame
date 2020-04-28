@@ -6,6 +6,7 @@ public class UseBase : MonoBehaviour
 {
     public virtual void Initiate()
     {
-        Debug.LogError("this should be overriden");
+        Debug.LogError("this should be overriten");
     }
+
 }

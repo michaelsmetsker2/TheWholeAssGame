@@ -3003,8 +3003,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 582.16864, y: -812.375}
-  m_SizeDelta: {x: 1164.3373, y: 189.24997}
+  m_AnchoredPosition: {x: 583.54694, y: -812.375}
+  m_SizeDelta: {x: 1167.0939, y: 189.24997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &224609452
 MonoBehaviour:
@@ -7782,8 +7782,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 582.16864, y: -573.125}
-  m_SizeDelta: {x: 1164.3373, y: 189.24997}
+  m_AnchoredPosition: {x: 583.54694, y: -573.125}
+  m_SizeDelta: {x: 1167.0939, y: 189.24997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &666551598
 MonoBehaviour:
@@ -11716,35 +11716,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1015848357}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9301b5be7ea78864f9f90a0c56615352, type: 3}
+  m_Script: {fileID: 11500000, guid: 8cf1993a7a01af142adbefc4ef96122a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boolhavior:
-    TalkBox: {fileID: 1487099843}
-    TManager: {fileID: 1487099847}
-    ChoiceUI: {fileID: 1665185941}
-    ChoiceManager: {fileID: 909401463}
-  TBlock0:
-    Name: TestNPC
-    Sentences:
-    - Want a quest?
-  Choices1:
-    Option1: Take Quest?
-    Option2: Don't
-    Option3: 
-    Option4: 
-  TBlock2:
-    Name: TestNPC
-    Sentences:
-    - Thanks
-    - Its a pretty good quest btw
-  TBlock3:
-    Name: Test NPC
-    Sentences:
-    - Wow thats kinda mean
-    - you sure you dont want the quest?
-  SlotController: {fileID: 1701019224}
-  Given: {fileID: 11400000, guid: 4cb2436368069f149a1977dab41fd263, type: 2}
 --- !u!1 &1021381443
 GameObject:
   m_ObjectHideFlags: 0
@@ -15942,8 +15916,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 582.16864, y: -333.875}
-  m_SizeDelta: {x: 1164.3373, y: 189.24997}
+  m_AnchoredPosition: {x: 583.54694, y: -333.875}
+  m_SizeDelta: {x: 1167.0939, y: 189.24997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1376423532
 MonoBehaviour:
@@ -16811,7 +16785,6 @@ GameObject:
   - component: {fileID: 1487099844}
   - component: {fileID: 1487099846}
   - component: {fileID: 1487099845}
-  - component: {fileID: 1487099847}
   m_Layer: 5
   m_Name: TalkBox
   m_TagString: Untagged
@@ -16875,21 +16848,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487099843}
   m_CullTransparentMesh: 0
---- !u!114 &1487099847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487099843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 608ec2466058e6042852319dc19d444d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NameText: {fileID: 1838399230}
-  ConvoText: {fileID: 321549947}
-  Manners: 0
 --- !u!1 &1505301173
 GameObject:
   m_ObjectHideFlags: 0
@@ -17354,6 +17312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1523693455}
   - component: {fileID: 1523693456}
+  - component: {fileID: 1523693457}
   m_Layer: 5
   m_Name: Convo
   m_TagString: Untagged
@@ -17390,6 +17349,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1523693454}
   m_CullTransparentMesh: 0
+--- !u!114 &1523693457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523693454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e208e919e00118d499ab627a5e2e2428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TalkBox: {fileID: 1487099843}
+  OpBox:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Otex:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  NameText: {fileID: 1838399230}
+  ConvoText: {fileID: 321549947}
 --- !u!1 &1529198634
 GameObject:
   m_ObjectHideFlags: 0
@@ -21773,8 +21757,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 582.16864, y: -94.625}
-  m_SizeDelta: {x: 1164.3373, y: 189.24997}
+  m_AnchoredPosition: {x: 583.54694, y: -94.625}
+  m_SizeDelta: {x: 1167.0939, y: 189.24997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1899740729
 MonoBehaviour:
