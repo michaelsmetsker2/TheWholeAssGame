@@ -3003,8 +3003,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 583.54694, y: -812.375}
-  m_SizeDelta: {x: 1167.0939, y: 189.24997}
+  m_AnchoredPosition: {x: 583.61945, y: -812.375}
+  m_SizeDelta: {x: 1167.2389, y: 189.24997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &224609452
 MonoBehaviour:
@@ -7782,8 +7782,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 583.54694, y: -573.125}
-  m_SizeDelta: {x: 1167.0939, y: 189.24997}
+  m_AnchoredPosition: {x: 583.61945, y: -573.125}
+  m_SizeDelta: {x: 1167.2389, y: 189.24997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &666551598
 MonoBehaviour:
@@ -11719,6 +11719,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf1993a7a01af142adbefc4ef96122a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Welcome:
+    Name: TestNpc
+    Sentences:
+    - sup
+    - welcome
+    - hi
+    HasQuestion: 0
+    Options:
+    - 
+    - 
+    - 
+    - 
 --- !u!1 &1021381443
 GameObject:
   m_ObjectHideFlags: 0
@@ -15916,8 +15928,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 583.54694, y: -333.875}
-  m_SizeDelta: {x: 1167.0939, y: 189.24997}
+  m_AnchoredPosition: {x: 583.61945, y: -333.875}
+  m_SizeDelta: {x: 1167.2389, y: 189.24997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1376423532
 MonoBehaviour:
@@ -17361,17 +17373,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e208e919e00118d499ab627a5e2e2428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ChoiceUI: {fileID: 1665185941}
   TalkBox: {fileID: 1487099843}
   OpBox:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1899740727}
+  - {fileID: 1376423530}
+  - {fileID: 666551596}
+  - {fileID: 224609450}
   Otex:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1240208999}
+  - {fileID: 926716133}
+  - {fileID: 329609243}
+  - {fileID: 99306135}
   NameText: {fileID: 1838399230}
   ConvoText: {fileID: 321549947}
 --- !u!1 &1529198634
@@ -21757,8 +21770,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 583.54694, y: -94.625}
-  m_SizeDelta: {x: 1167.0939, y: 189.24997}
+  m_AnchoredPosition: {x: 583.61945, y: -94.625}
+  m_SizeDelta: {x: 1167.2389, y: 189.24997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1899740729
 MonoBehaviour:
