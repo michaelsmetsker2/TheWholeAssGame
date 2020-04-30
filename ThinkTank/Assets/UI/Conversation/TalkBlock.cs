@@ -6,7 +6,7 @@ using UnityEngine;
 public class TalkBlock
 {
     //speakers name
-    public string Name;
+    public string Speaker;
     [TextArea(3, 10)]
     public string[] Sentences;
 

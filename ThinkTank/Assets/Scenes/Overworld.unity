@@ -3046,7 +3046,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 909401463}
+      - m_Target: {fileID: 1523693457}
         m_MethodName: Select4
         m_Mode: 1
         m_Arguments:
@@ -7825,7 +7825,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 909401463}
+      - m_Target: {fileID: 1523693457}
         m_MethodName: Select3
         m_Mode: 1
         m_Arguments:
@@ -9972,7 +9972,6 @@ GameObject:
   - component: {fileID: 909401460}
   - component: {fileID: 909401459}
   - component: {fileID: 909401458}
-  - component: {fileID: 909401463}
   - component: {fileID: 909401464}
   m_Layer: 5
   m_Name: Canvas
@@ -10087,27 +10086,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &909401463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 909401457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87fe28f40e9abd64794174c509bcf2cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Chosen: 0
-  Box1: {fileID: 1899740727}
-  CText1: {fileID: 1240208999}
-  Box2: {fileID: 1376423530}
-  CText2: {fileID: 926716133}
-  Box3: {fileID: 666551596}
-  CText3: {fileID: 329609243}
-  Box4: {fileID: 224609450}
-  CText4: {fileID: 99306135}
 --- !u!114 &909401464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11586,6 +11564,7 @@ GameObject:
   - component: {fileID: 1015848361}
   - component: {fileID: 1015848358}
   - component: {fileID: 1015848362}
+  - component: {fileID: 1015848363}
   m_Layer: 9
   m_Name: TestNpc
   m_TagString: Interactable
@@ -11719,18 +11698,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf1993a7a01af142adbefc4ef96122a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Welcome:
-    Name: TestNpc
+  Data: {fileID: 1015848363}
+  ConvPlace: 0
+  Blocks:
+  - Speaker: jeff
     Sentences:
-    - sup
-    - welcome
     - hi
+    - im jeff
     HasQuestion: 0
     Options:
     - 
     - 
     - 
     - 
+  - Speaker: jeff
+    Sentences:
+    - i just had a thought
+    - do you want this item?
+    HasQuestion: 1
+    Options:
+    - yeah
+    - nah
+  - Speaker: jeff
+    Sentences:
+    - wow asshole
+    - you sure you dont want it, its pretty cool
+    HasQuestion: 1
+    Options:
+    - yes i'd love it
+    - NO I HATE YOU
+  - Speaker: jeff
+    Sentences:
+    - i lied, the item sucks
+    HasQuestion: 0
+    Options:
+    - 
+    - 
+    - 
+    - 
+  ToGive: {fileID: 11400000, guid: 4cb2436368069f149a1977dab41fd263, type: 2}
+--- !u!114 &1015848363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015848357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a5a01692d9495443b63a284bd78563d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1021381443
 GameObject:
   m_ObjectHideFlags: 0
@@ -15971,7 +15989,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 909401463}
+      - m_Target: {fileID: 1523693457}
         m_MethodName: Select2
         m_Mode: 1
         m_Arguments:
@@ -17387,6 +17405,7 @@ MonoBehaviour:
   - {fileID: 99306135}
   NameText: {fileID: 1838399230}
   ConvoText: {fileID: 321549947}
+  Chosen: 0
 --- !u!1 &1529198634
 GameObject:
   m_ObjectHideFlags: 0
@@ -21813,7 +21832,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 909401463}
+      - m_Target: {fileID: 1523693457}
         m_MethodName: Select1
         m_Mode: 1
         m_Arguments:

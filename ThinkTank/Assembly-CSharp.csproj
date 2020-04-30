@@ -63,16 +63,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Gameworld\Interactables\DataBase.cs" />
     <Compile Include="Assets\Gameworld\Interactables\ItemBase.cs" />
-    <Compile Include="Assets\Gameworld\Interactables\T_TestNpc.cs" />
+    <Compile Include="Assets\Gameworld\Interactables\Npc\TestNpc1\D_TestNpc.cs" />
+    <Compile Include="Assets\Gameworld\Interactables\Npc\TestNpc1\T_TestNpc.cs" />
     <Compile Include="Assets\Gameworld\Interactables\TalkBase.cs" />
     <Compile Include="Assets\Gameworld\Interactables\UseBase.cs" />
     <Compile Include="Assets\Gameworld\Items\Scrpts\Item.cs" />
     <Compile Include="Assets\Gameworld\Items\Scrpts\UselessItem.cs" />
     <Compile Include="Assets\Gameworld\Quests\Goal.cs" />
-    <Compile Include="Assets\Gameworld\Quests\ItemGoal.cs" />
     <Compile Include="Assets\Gameworld\Quests\Quest.cs" />
-    <Compile Include="Assets\Gameworld\Quests\TestQuest.cs" />
     <Compile Include="Assets\Player\Scripts\DataState.cs" />
     <Compile Include="Assets\Player\Scripts\Interactables.cs" />
     <Compile Include="Assets\Player\Scripts\PlayerMovement.cs" />
@@ -81,8 +81,6 @@
     <Compile Include="Assets\Scripts\GlobalData\SlotController.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\UI\CanvasSingleton.cs" />
-    <Compile Include="Assets\UI\Conversation\ChoiceManager.cs" />
-    <Compile Include="Assets\UI\Conversation\DialogueManager.cs" />
     <Compile Include="Assets\UI\Conversation\Interpreter.cs" />
     <Compile Include="Assets\UI\Conversation\TalkBlock.cs" />
     <Compile Include="Assets\UI\E Menu\GameMenu.cs" />

@@ -1,12 +1,10 @@
 	features
 
 
-change talkto to queues
+split gamemenu into 2-3 scripts one for item handeling one for quest handeling- also need to tidy up the whole wip selectable system
 figure out how to do quest rewards	
 make different scene loaders in the overworld teeleport you to their respective door/loadzone
-change objects/npc to scriptable objects/prefab if i can if not then shorten down code
-change boolhavior/testnpc talkto
-money ui
+money ui/ money system (should be easy)
 make so npc remember you
 interactions
 inventory
@@ -15,19 +13,16 @@ item popups
 sprint/sprint item
 
 	bugs/im not smart enough to do
-cant get boolhavior to auto initiate
+None!!!
 
 	optimization
-GR8-
+having a coroutine for each question in an npc might be a bit much, i should find a way to fix that
 
 	remember
+
+using linq might be useful
+add acheivment system
 update other scenes with nessecary building blocks
-
-serializefield to show pricate variables
-hideininspector to hide public ones
-
-inheritance is cool 
-	need to do shit with that
 
 enums are cool
 

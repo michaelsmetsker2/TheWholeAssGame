@@ -1,36 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
 
+[System.Serializable]
 public class Quest : MonoBehaviour
 {
-    public List<Goal> Goals;
-    public string QuestName;
-    public string Description;
-    public int MoneyReward;
-    public Item ItemReward;
-    public bool Completed;
+    public string Name;
 
-    private void Start()
-    {
-        Goals = new List<Goal>();
-    }
+    public int Status;
 
-    public void CheckGoals()
-    {
-        if (Goals.All(g => g.Completed))
-        {
-            Completed = true;
-            GiveReward();
-        }
-    }
+    public Goal[] Goals = new Goal[1];
 
-    void GiveReward()
+    public bool SpecialSnowflake;
+
+    public void DisplayNext()
     {
-        if (ItemReward != null)
-        {
-            //give item
-        }
+
     }
 }

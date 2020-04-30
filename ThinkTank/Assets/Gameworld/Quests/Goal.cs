@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
-    public string Description;
     public bool Completed;
+
+
+    public string Description;
+
     public int CurrentAmount;
     public int RequiredAmount;
 
-    public virtual void Init()
-    {
-        // defualt init stuff
-    }
-
     public void Evaluate()
     {
+        //non complete this is gist
         if (CurrentAmount >= RequiredAmount)
         {
             Complete();

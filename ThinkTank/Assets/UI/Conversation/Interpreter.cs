@@ -26,7 +26,8 @@ public class Interpreter : MonoBehaviour
     public Text NameText;
     public Text ConvoText;
 
-    int Chosen = 0;
+    [HideInInspector]
+    public int Chosen = 0;
 
     private TalkBlock CurrentBlock;
 
@@ -38,27 +39,30 @@ public class Interpreter : MonoBehaviour
         CurrentBlock = Block;
 
         QText = new Queue<string>();
-
         QText.Clear();
 
-        NameText.text = CurrentBlock.Name;
+        //update the name text
+        NameText.text = CurrentBlock.Speaker;
 
+        //initialize queue
         foreach (string Sentence in CurrentBlock.Sentences)
         {
             QText.Enqueue(Sentence);
         }
+
         TalkBox.SetActive(true);
 
+        //first sentence starts automatically
         DisplayNextSentence();
     }
 
     private void DisplayNextSentence()
     {
+        //when theres no more sentences left
         if (QText.Count == 0)
         {
-            Debug.LogWarning("fix this shit");
             TalkBox.SetActive(false);
-            Time.timeScale = 1f;
+            MakeChoice();
             return;
         }
         string CurrentLine = QText.Dequeue();
@@ -70,7 +74,6 @@ public class Interpreter : MonoBehaviour
     private IEnumerator GetE()
     {
         yield return new WaitForEndOfFrame();
-
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.E));
         DisplayNextSentence();
     }
@@ -86,7 +89,7 @@ public class Interpreter : MonoBehaviour
             //only set the needed choice boxes to active
             for (int O = 0; O < 4; O++)
             {
-                if (CurrentBlock.Options != null)
+                if (CurrentBlock.Options.Length >= O + 1)
                 {
                     OpBox[O].SetActive(true);
                     Otex[O].text = CurrentBlock.Options[O];
@@ -102,6 +105,7 @@ public class Interpreter : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
+
 
     public void Select1()
     {

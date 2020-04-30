@@ -4,32 +4,18 @@ using UnityEngine;
 
 public class QuestController : MonoBehaviour
 {
+    #region Instance
     public static QuestController Instance;
-    void Awake()   //singleton
+    void Awake()
     {
-        if (Instance == null)
-        {
-            DontDestroyOnLoad(gameObject);
-            Instance = this;
-        }
-        else if (Instance != this)
-        {
-            Destroy(gameObject);
-        }
+        Instance = this;
     }
+    #endregion
 
-    public int[] QuestStatus = new int[99];
-
-    private void Start()
-    {
-        foreach (int S in QuestStatus)
-        {
-            QuestStatus[S] = 0;
-        }    
-    }
+    public Quest[] QuestStatus = new Quest[3];
 
     public void StartQuest(int QuestNumber)
     {
-        QuestStatus[QuestNumber] = 1;
+        QuestStatus[QuestNumber].Status = 1;
     }
 }
