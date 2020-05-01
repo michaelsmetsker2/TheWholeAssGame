@@ -17,5 +17,7 @@ public class QuestController : MonoBehaviour
     public void StartQuest(int QuestNumber)
     {
         QuestStatus[QuestNumber].Status = 1;
+
+        Debug.Log("Display Quest Popup here");
     }
 }

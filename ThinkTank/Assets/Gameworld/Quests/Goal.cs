@@ -6,7 +6,6 @@ public class Goal : MonoBehaviour
 {
     public bool Completed;
 
-
     public string Description;
 
     public int CurrentAmount;
