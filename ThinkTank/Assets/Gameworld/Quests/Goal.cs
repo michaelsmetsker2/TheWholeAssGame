@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Goal : MonoBehaviour
+[System.Serializable]
+public class Goal
 {
     public bool Completed;
 

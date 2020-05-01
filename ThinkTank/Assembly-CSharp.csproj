@@ -85,10 +85,10 @@
     <Compile Include="Assets\UI\Conversation\Interpreter.cs" />
     <Compile Include="Assets\UI\Conversation\TalkBlock.cs" />
     <Compile Include="Assets\UI\E Menu\GameMenu.cs" />
-    <Compile Include="Assets\UI\E Menu\Inventory\InventoryMenu.cs" />
     <Compile Include="Assets\UI\E Menu\Inventory\ItemInteract.cs" />
     <Compile Include="Assets\UI\E Menu\Inventory\ItemSlot.cs" />
-    <Compile Include="Assets\UI\E Menu\QuestMenu.cs" />
+    <Compile Include="Assets\UI\E Menu\QuestUI\QuestSlot.cs" />
+    <Compile Include="Assets\UI\E Menu\UIPages.cs" />
     <Compile Include="Assets\UI\E Menu\UiSelected.cs" />
     <Compile Include="Assets\UI\InteractionManager.cs" />
     <None Include="Assets\workflow.txt" />

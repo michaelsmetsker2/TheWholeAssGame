@@ -15,6 +15,8 @@ public class UiSelected : MonoBehaviour
 
     public ItemInteract ItemInteract;
 
+    public GameObject QuestMenu;
+
     public Text Description;
     public Image LargeIcon;
 
@@ -22,6 +24,8 @@ public class UiSelected : MonoBehaviour
     {
         Description.text = null;
         ItemInteract.gameObject.SetActive(false);
+
+        QuestMenu.SetActive(true);
 
         Debug.Log("Hey put the map here instead of null, loser");
         LargeIcon.sprite = null;
@@ -32,14 +36,25 @@ public class UiSelected : MonoBehaviour
         Clear();
         Description.text = Selected.Description;
         LargeIcon.sprite = Selected.IconL;
+
+        QuestMenu.SetActive(false);
+
         ItemInteract.gameObject.SetActive(true);
         ItemInteract.StartInteract(Selected);
 
     }
 
-    public void SelectQuest()
+    public void SelectQuest(Quest Selected)
     {
         Clear();
 
+        //need to place map marker
+
+        //need to place down descriptions
+
+        foreach (Goal G in Selected.Goals)
+        {
+            Description.text += "\n" + G.Description + " " + G.CurrentAmount +"/" + G.RequiredAmount;
+        }
     }
 }

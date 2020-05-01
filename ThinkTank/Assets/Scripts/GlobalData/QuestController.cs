@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class QuestController : MonoBehaviour
 {
@@ -12,11 +13,22 @@ public class QuestController : MonoBehaviour
     }
     #endregion
 
-    public Quest[] QuestStatus = new Quest[3];
+    //51 even though theres only 50 slots because an extra slot to put shit down before sorting
+    public Quest[] SlotID = new Quest[51];
 
-    public void StartQuest(int QuestNumber)
+    public void StartQuest(Quest Given)
     {
-        QuestStatus[QuestNumber].Status = 1;
+        if (SlotID.Contains(Given))
+        {
+            Debug.LogWarning("duplicate quest " + Given);
+        }
+        else
+        {
+            Debug.LogError("Fix This");
+            SlotID[51] = Given;
+        }
+
+        IEnumerable<Quest> query = SlotID.OrderBy(Quest => Quest.Completed);
 
         Debug.Log("Display Quest Popup here");
     }
