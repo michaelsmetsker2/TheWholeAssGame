@@ -27,3 +27,5 @@ update other scenes with nessecary building blocks
 enums are cool
 
 i need to learn about structs
+
+lists are better than arrays fuck you youtube tutorials

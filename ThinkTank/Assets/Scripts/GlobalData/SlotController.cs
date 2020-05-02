@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SlotController : MonoBehaviour
 {
@@ -20,16 +21,17 @@ public class SlotController : MonoBehaviour
     }
     #endregion
 
-    public Item[] SlotID = new Item[99];
+    public List<Item> SlotID = new List <Item>(99);
 
 
     private bool Found;
 
+    public UnityEvent CheckItem;
 
     //when a new item is picked up
 
     //i should probably add something here for quest goal updating
-    
+
     public void NewItem(Item Aquired)
     {
 
@@ -57,5 +59,7 @@ public class SlotController : MonoBehaviour
                 }
             }
         }
+        //trigger evaluate
+        CheckItem.Invoke();
     }
 }

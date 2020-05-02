@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class Goal
+public class Goal : ScriptableObject
 {
     public bool Completed;
 
@@ -12,17 +11,23 @@ public class Goal
     public int CurrentAmount;
     public int RequiredAmount;
 
-    public void Evaluate()
+    public virtual void Init()
     {
-        //non complete this is gist
-        if (CurrentAmount >= RequiredAmount)
-        {
-            Complete();
-        }
+
+    }
+
+    public virtual void Evaluate()
+    {
+
     }   
     
     public virtual void Complete()
     {
         Completed = true;
+    }
+
+    public virtual void GiveReward()
+    {
+
     }
 }

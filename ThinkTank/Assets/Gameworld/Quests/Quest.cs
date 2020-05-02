@@ -10,9 +10,5 @@ public class Quest : ScriptableObject
 
     public bool Completed;
 
-    public Goal fifi;
-
-    public Goal[] Goals = new Goal[1];
-
-    //reward here (derive thingy
+    public Goal[] Goals;
 }
