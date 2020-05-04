@@ -67,6 +67,7 @@
     <Compile Include="Assets\Gameworld\Interactables\ItemBase.cs" />
     <Compile Include="Assets\Gameworld\Interactables\Npc\TestNpc1\D_TestNpc.cs" />
     <Compile Include="Assets\Gameworld\Interactables\Npc\TestNpc1\T_TestNpc.cs" />
+    <Compile Include="Assets\Gameworld\Interactables\Npc\TestNpc1\U_TestNpc.cs" />
     <Compile Include="Assets\Gameworld\Interactables\TalkBase.cs" />
     <Compile Include="Assets\Gameworld\Interactables\UseBase.cs" />
     <Compile Include="Assets\Gameworld\Items\Scrpts\Item.cs" />

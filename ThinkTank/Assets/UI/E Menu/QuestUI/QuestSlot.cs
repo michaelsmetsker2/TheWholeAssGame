@@ -16,15 +16,15 @@ public class QuestSlot : MonoBehaviour
 
     private void OnEnable()
     {
-        if (QuestController.Instance.SlotID[SlotNumber] != null)
-        {
-            Empty = false;
-            ButtonBox.text = QuestController.Instance.SlotID[SlotNumber].Name;
-        }
-        else
+        if (QuestController.Instance.SlotID.Count >= SlotNumber + 1)
         {
             Empty = true;
             ButtonBox.text = null;
+        }
+        else
+        {
+            Empty = false;
+            ButtonBox.text = QuestController.Instance.SlotID[SlotNumber].Name;
         }
     }
 

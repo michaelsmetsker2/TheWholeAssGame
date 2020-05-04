@@ -1,8 +1,6 @@
 	features
 
 
-split gamemenu into 2-3 scripts one for item handeling one for quest handeling- also need to tidy up the whole wip selectable system
-figure out how to do quest rewards	
 make different scene loaders in the overworld teeleport you to their respective door/loadzone
 money ui/ money system (should be easy)
 make so npc remember you
@@ -13,14 +11,13 @@ item popups
 sprint/sprint item
 
 	bugs/im not smart enough to do
-None!!!
+double walking speed diagonal
 
 	optimization
 having a coroutine for each question in an npc might be a bit much, i should find a way to fix that
 
 	remember
 
-using linq might be useful
 add acheivment system
 update other scenes with nessecary building blocks
 

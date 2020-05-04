@@ -21,7 +21,7 @@ public class SlotController : MonoBehaviour
     }
     #endregion
 
-    public List<Item> SlotID = new List <Item>(99);
+    public Item[] SlotID = new Item[99];
 
 
     private bool Found;

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659ec273cc855484bacffd13fea84ff1, type: 3}
+  m_Name: TestQuest
+  m_EditorClassIdentifier: 
+  Name: TestQuest
+  Completed: 0
+  Progress: 1
+  Goals:
+  - {fileID: 11400000, guid: 870b991b3fe309b47a517997e3032318, type: 2}

@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class Goal : ScriptableObject
 {
-    public bool Completed;
+
+    public Quest Parent;
+
+    [HideInInspector]
+    public bool Completed = false;
 
     public string Description;
 
-    public int CurrentAmount;
+    public int CurrentAmount = 0;
     public int RequiredAmount;
 
-    public virtual void Init()
+    public virtual void Init(Quest Attached)
     {
-
+        CurrentAmount = 0;
+        Completed = false;
     }
 
     public virtual void Evaluate()
@@ -22,11 +27,6 @@ public class Goal : ScriptableObject
     }   
     
     public virtual void Complete()
-    {
-        Completed = true;
-    }
-
-    public virtual void GiveReward()
     {
 
     }

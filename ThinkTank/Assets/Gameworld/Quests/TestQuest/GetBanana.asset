@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb0914da8395d94587a55d9aaed0b65, type: 3}
   m_Name: GetBanana
   m_EditorClassIdentifier: 
-  Completed: 0
+  Parent: {fileID: 11400000, guid: 0bd17a087fb386646b3853fa8fe3f316, type: 2}
+  Completed: 1
   Description: Yall should get one banana
   CurrentAmount: 0
-  RequiredAmount: 0
+  RequiredAmount: 1
+  Needed: {fileID: 11400000, guid: 4cb2436368069f149a1977dab41fd263, type: 2}

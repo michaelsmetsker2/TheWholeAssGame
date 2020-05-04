@@ -13,8 +13,7 @@ public class QuestController : MonoBehaviour
     }
     #endregion
 
-    //51 even though theres only 50 slots because an extra slot to put shit down before sorting
-    public Quest[] SlotID = new Quest[51];
+    public List<Quest> SlotID = new List<Quest>(0);
 
     public void StartQuest(Quest Given)
     {
@@ -24,11 +23,13 @@ public class QuestController : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Fix This");
-            SlotID[51] = Given;
+            SlotID.Add(Given);
         }
 
-        IEnumerable<Quest> query = SlotID.OrderBy(Quest => Quest.Completed);
+        SlotID.OrderBy(Q => Q.Completed);
+
+
+
 
         Debug.Log("Display Quest Popup here");
     }

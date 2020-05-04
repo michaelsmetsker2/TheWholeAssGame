@@ -16133,7 +16133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf1993a7a01af142adbefc4ef96122a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Data: {fileID: 1015848363}
+  Data: {fileID: 0}
   ConvPlace: 0
   Blocks:
   - Speaker: jeff
@@ -16181,9 +16181,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1015848357}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a5a01692d9495443b63a284bd78563d, type: 3}
+  m_Script: {fileID: 11500000, guid: 21917482f7e8d324ea10c956b13d6168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ToGive: {fileID: 11400000, guid: 0bd17a087fb386646b3853fa8fe3f316, type: 2}
 --- !u!1 &1017841063
 GameObject:
   m_ObjectHideFlags: 0
@@ -27117,57 +27118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 368db04d6691fa741bafb41a86dc4177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SlotID:
-  - {fileID: 11400000, guid: 634a97c1d959df941b7f42dc11ffe458, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  SlotID: []
 --- !u!4 &1701019223
 Transform:
   m_ObjectHideFlags: 0
@@ -27295,6 +27246,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  CheckItem:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1701019226
 MonoBehaviour:
   m_ObjectHideFlags: 0
