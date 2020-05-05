@@ -20,6 +20,13 @@ public class UiSelected : MonoBehaviour
     public Text Description;
     public Image LargeIcon;
 
+    public bool IsSelecting;
+
+    private void OnEnable()
+    {
+        Clear();
+    }
+
     public void Clear()
     {
         Description.text = null;
@@ -27,8 +34,11 @@ public class UiSelected : MonoBehaviour
 
         QuestMenu.SetActive(true);
 
-        Debug.Log("Hey put the map here instead of null, loser");
+        //put map here
+
         LargeIcon.sprite = null;
+
+        IsSelecting = false;
     }
 
     public void SelectItem(Item Selected)
@@ -42,6 +52,7 @@ public class UiSelected : MonoBehaviour
         ItemInteract.gameObject.SetActive(true);
         ItemInteract.StartInteract(Selected);
 
+        IsSelecting = true;
     }
 
     public void SelectQuest(Quest Selected)
@@ -54,7 +65,16 @@ public class UiSelected : MonoBehaviour
 
         foreach (Goal G in Selected.Goals)
         {
-            Description.text += "\n" + G.Description + " " + G.CurrentAmount +"/" + G.RequiredAmount;
+            if (G.Completed)
+            {
+                Description.text += G.Description + " Complete\n";
+            }
+            else
+            {
+                Description.text += G.Description + " " + G.CurrentAmount +"/" + G.RequiredAmount + "\n";
+            }
         }
+
+        IsSelecting = true;
     }
 }

@@ -23,14 +23,12 @@ public class QuestController : MonoBehaviour
         }
         else
         {
+            Given.Init();
             SlotID.Add(Given);
         }
 
         SlotID.OrderBy(Q => Q.Completed);
 
-
-
-
-        Debug.Log("Display Quest Popup here");
+        //Display Quest Popup here
     }
 }

@@ -28,6 +28,6 @@ public class Goal : ScriptableObject
     
     public virtual void Complete()
     {
-
+        //during complete if anything needs to happen (such as removing an item from the invntory) it can be added here
     }
 }

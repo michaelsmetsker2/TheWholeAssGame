@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestQuest
   m_EditorClassIdentifier: 
   Name: TestQuest
-  Completed: 0
+  Completed: 1
   Progress: 1
   Goals:
   - {fileID: 11400000, guid: 870b991b3fe309b47a517997e3032318, type: 2}

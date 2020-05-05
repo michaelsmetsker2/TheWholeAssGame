@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class QuestSlot : MonoBehaviour
 {
-
     //order of slot on the page
     public int SlotNumber;
 
@@ -16,23 +15,42 @@ public class QuestSlot : MonoBehaviour
 
     private void OnEnable()
     {
-        if (QuestController.Instance.SlotID.Count >= SlotNumber + 1)
+        if (SlotNumber > QuestController.Instance.SlotID.Count - 1)
         {
-            Empty = true;
             ButtonBox.text = null;
+            Empty = true;
         }
         else
         {
-            Empty = false;
+            if (QuestController.Instance.SlotID[SlotNumber].Completed)
+            {
+                ButtonBox.color = Color.green;
+            }
+            else
+            {
+                ButtonBox.color = Color.black;
+            }
+
             ButtonBox.text = QuestController.Instance.SlotID[SlotNumber].Name;
+            Empty = false;
         }
     }
 
     public void Select()
     {
+        //add double click to return to nothing selected0
+
         if (Empty == false)
         {
-            UiSelected.Instance.SelectQuest(QuestController.Instance.SlotID[SlotNumber]);
+            if (UiSelected.Instance.IsSelecting)
+            {
+                Debug.LogWarning("fix this shit");
+                UiSelected.Instance.Clear();
+            }
+            else
+            {
+                UiSelected.Instance.SelectQuest(QuestController.Instance.SlotID[SlotNumber]);
+            }
         }
     }
 }

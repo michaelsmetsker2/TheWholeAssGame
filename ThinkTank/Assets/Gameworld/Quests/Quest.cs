@@ -16,13 +16,13 @@ public class Quest : ScriptableObject
 
     public void Init()
     {
-
         Progress = 0;
         Completed = false;
         
         Goals[Progress].Init(this);
     }
 
+    //triggered when a goal is complete
     public void NextGoal()
     {
         Progress++;
@@ -39,6 +39,11 @@ public class Quest : ScriptableObject
 
     public void Complete()
     {
+        //when all goals are finished
+
+        Debug.Log("congrats on completing a quest");
+
+        //do some reward shit here
         Completed = true;
     }
 }

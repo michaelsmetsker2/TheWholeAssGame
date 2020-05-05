@@ -10,6 +10,7 @@ public class ItemGoal : Goal
 
     public override void Init(Quest Attached)
     {
+
         base.Init(Attached);
 
         Parent = Attached;

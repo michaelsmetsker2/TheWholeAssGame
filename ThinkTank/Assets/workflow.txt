@@ -1,14 +1,12 @@
 	features
 
-
 make different scene loaders in the overworld teeleport you to their respective door/loadzone
 money ui/ money system (should be easy)
 make so npc remember you
 interactions
 inventory
-quests
-item popups
-sprint/sprint item
+quests  rewards
+item popups ect
 
 	bugs/im not smart enough to do
 double walking speed diagonal
@@ -21,8 +19,7 @@ having a coroutine for each question in an npc might be a bit much, i should fin
 add acheivment system
 update other scenes with nessecary building blocks
 
+sprint/sprint item
 enums are cool
 
 i need to learn about structs
-
-lists are better than arrays fuck you youtube tutorials
