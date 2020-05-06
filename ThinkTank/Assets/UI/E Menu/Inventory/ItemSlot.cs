@@ -52,14 +52,7 @@ public class ItemSlot : MonoBehaviour
     {
         if (Empty == false)
         {
-            if (UiSelected.Instance.IsSelecting)
-            {
-                UiSelected.Instance.Clear();
-            }
-            else
-            {
-                UiSelected.Instance.SelectItem(SlotController.Instance.SlotID[SlotNumber]);
-            }
+            UiSelected.Instance.SelectItem(SlotController.Instance.SlotID[SlotNumber]);
         }
     }
 }
