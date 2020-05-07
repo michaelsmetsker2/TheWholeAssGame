@@ -22,6 +22,9 @@ public class UiSelected : MonoBehaviour
 
     public bool IsSelecting;
 
+    //for the item interaction
+    public string SelectedItem;
+
     private void OnEnable()
     {
         Clear();
@@ -29,6 +32,8 @@ public class UiSelected : MonoBehaviour
 
     public void Clear()
     {
+        SelectedItem = null;
+
         Description.text = null;
         ItemInteract.gameObject.SetActive(false);
 
@@ -44,6 +49,9 @@ public class UiSelected : MonoBehaviour
     public void SelectItem(Item Selected)
     {
         Clear();
+
+        SelectedItem = Selected.name;
+
         Description.text = Selected.Description;
         LargeIcon.sprite = Selected.IconL;
 

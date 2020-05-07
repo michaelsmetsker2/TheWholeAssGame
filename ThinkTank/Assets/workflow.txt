@@ -2,8 +2,7 @@
 
 make different scene loaders in the overworld teeleport you to their respective door/loadzone
 money ui/ money system (should be easy)
-make so npc remember you
-interactions
+make so npc remember you 
 inventory
 quests  rewards
 item popups ect

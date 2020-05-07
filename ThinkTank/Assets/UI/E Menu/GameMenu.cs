@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class GameMenu : MonoBehaviour
 {
-    //link components
-    public GameObject MenuUI;
-
     //is menu open?
     public bool IsOpen = false;
+
+    public GameObject MenuUi;
+
+    public static GameMenu Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     void Update()
     {
@@ -30,14 +36,14 @@ public class GameMenu : MonoBehaviour
 
     void Open()
     {
-        MenuUI.SetActive(true);
+        MenuUi.SetActive(true);
         Time.timeScale = 0f;
         IsOpen = true;
     }
 
     void Close()
     {
-        MenuUI.SetActive(false);
+        MenuUi.SetActive(false);
         Time.timeScale = 1f;
         IsOpen = false;
     }

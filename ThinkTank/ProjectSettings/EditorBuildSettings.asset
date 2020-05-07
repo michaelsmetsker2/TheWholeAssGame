@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Interior.unity
+    path: Assets/Scenes/StartingApt.unity
     guid: 875edef5b00ab6843b0efdb328e957c1
   - enabled: 1
     path: Assets/Scenes/Overworld.unity

@@ -4,8 +4,26 @@ using UnityEngine;
 
 public class ItemBase : MonoBehaviour
 {
-    public virtual void Initiate()
+
+    public string Received;
+
+    public void Initiate()
     {
-        Debug.LogError("this should be overriden");
+        GameMenu.Instance.MenuUi.SetActive(true);
+        StartCoroutine(GetItem());
     }
+
+    public virtual void Action()
+    {
+        Debug.LogWarning("this should be overwritten");
+    }
+
+    public IEnumerator GetItem()
+    {
+        yield return new WaitUntil(() => UiSelected.Instance.SelectedItem != null);
+        Received = UiSelected.Instance.SelectedItem;
+        GameMenu.Instance.MenuUi.SetActive(false);
+        Action();
+    }
+
 }

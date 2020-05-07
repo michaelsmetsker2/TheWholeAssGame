@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 public abstract class Item : ScriptableObject
 {
-    public string Name;
-
     [TextArea(10,15)]
     public string Description;
 
@@ -14,5 +12,4 @@ public abstract class Item : ScriptableObject
     public int Amount;
 
     public abstract void OnUse();
-
 }
