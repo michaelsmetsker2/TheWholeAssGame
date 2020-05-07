@@ -82,7 +82,6 @@
     <Compile Include="Assets\Scripts\GlobalData\QuestController.cs" />
     <Compile Include="Assets\Scripts\GlobalData\SlotController.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
-    <Compile Include="Assets\UI\CanvasSingleton.cs" />
     <Compile Include="Assets\UI\Conversation\Interpreter.cs" />
     <Compile Include="Assets\UI\Conversation\TalkBlock.cs" />
     <Compile Include="Assets\UI\E Menu\GameMenu.cs" />

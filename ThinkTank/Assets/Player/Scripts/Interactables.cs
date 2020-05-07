@@ -5,13 +5,13 @@ using UnityEngine;
 //attached to player
 public class Interactables : MonoBehaviour
 {
-    //The menu that pops up after pressing f near an object/npc
-    public InteractionManager InteractMenu;
     //the f icon that shows up when near an interactable object
     public GameObject FButton;
 
     //the object that's  being interacted with (is set when in range) (i should probably change that to save gpus stuff)
-    public GameObject InteractObject;
+    private GameObject InteractObject;
+
+    public GameObject Imenu;
 
     private void Start() //initiation
     {
@@ -44,7 +44,7 @@ public class Interactables : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F)&& Time.timeScale == 1f)
         {
             Time.timeScale = 0f;
-            InteractMenu.gameObject.SetActive(true);
+            Imenu.SetActive(true);
             StartCoroutine (GetPress());
         }
     }
@@ -52,35 +52,35 @@ public class Interactables : MonoBehaviour
     //waits until a menu option is chosen and then sends button value to the objects behavioral script
     public IEnumerator GetPress()
     {
-        yield return new WaitUntil(() => InteractMenu.PressId != 0);
+        yield return new WaitUntil(() => InteractionManager.Instance.PressId != 0);
 
-        switch (InteractMenu.PressId)
+        switch (InteractionManager.Instance.PressId)
         {
             case 1: //talk
                 {
-                    InteractMenu.PressId = 0;
-                    InteractMenu.gameObject.SetActive(false);
+                    InteractionManager.Instance.PressId = 0;
+                    InteractionManager.Instance.gameObject.SetActive(false);
                     InteractObject.GetComponent<TalkBase>().Initiate();
                     break;
                 }
             case 2: //item
                 {
-                    InteractMenu.PressId = 0;
-                    InteractMenu.gameObject.SetActive(false);
+                    InteractionManager.Instance.PressId = 0;
+                    InteractionManager.Instance.gameObject.SetActive(false);
                     InteractObject.GetComponent<ItemBase>().Initiate();
                     break;
                 }
             case 3: //use
                 {
-                    InteractMenu.PressId = 0;
-                    InteractMenu.gameObject.SetActive(false);
+                    InteractionManager.Instance.PressId = 0;
+                    InteractionManager.Instance.gameObject.SetActive(false);
                     InteractObject.GetComponent<UseBase>().Initiate();
                     break;
                 }
             case 4: //exit
                 {
-                    InteractMenu.PressId = 0;
-                    InteractMenu.gameObject.SetActive(false);
+                    InteractionManager.Instance.PressId = 0;
+                    InteractionManager.Instance.gameObject.SetActive(false);
                     Time.timeScale = 1f;
                     break;
                 }

@@ -6,6 +6,14 @@ using UnityEngine;
 public class InteractionManager : MonoBehaviour
 {
     public int PressId = 0;
+
+    public static InteractionManager Instance;
+
+    public void Awake()
+    {
+        Instance = this;
+    }
+
     public void Talk()
     {
         PressId = 1;
