@@ -22958,6 +22958,7 @@ GameObject:
   - component: {fileID: 1497443700}
   - component: {fileID: 1497443702}
   - component: {fileID: 1497443701}
+  - component: {fileID: 1497443703}
   m_Layer: 5
   m_Name: CurrencyCounter
   m_TagString: Untagged
@@ -23024,6 +23025,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497443699}
   m_CullTransparentMesh: 0
+--- !u!114 &1497443703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497443699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32fc0c437fb50e449126f3025dfb48a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoneyUI: {fileID: 1497443701}
 --- !u!1 &1499352190
 GameObject:
   m_ObjectHideFlags: 0
@@ -26744,7 +26758,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 207045be166266849bdf33f9eac7caaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Money: 0
+  CurrentZone: 0
+  Dollars: 0
+  Dennars: 0
+  Gold: 0
 --- !u!224 &1704344497 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4061851963115138578, guid: 7599d09be2c38774a8b1bffbb3b5e606,
@@ -27583,11 +27600,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1769454816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52deaedf6814c9d44a81dac75b1e59d9, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ab23d0debb0a7c49bf0e0103ba8b428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerController: {fileID: 1701019226}
-  Money: 0
 --- !u!61 &1769454819
 BoxCollider2D:
   m_ObjectHideFlags: 0

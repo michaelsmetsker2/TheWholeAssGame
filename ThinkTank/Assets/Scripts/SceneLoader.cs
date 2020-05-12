@@ -11,8 +11,6 @@ public class SceneLoader : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<DataState>().Save(); //saves playerdata to global controller
-
             SceneManager.LoadScene(SceneName); // loads scene When player enter the trigger collider
         }
     }
