@@ -92,7 +92,6 @@
     <Compile Include="Assets\UI\E Menu\UIPages.cs" />
     <Compile Include="Assets\UI\E Menu\UiSelected.cs" />
     <Compile Include="Assets\UI\InteractionManager.cs" />
-    <Compile Include="Assets\UpdateCurrency.cs" />
     <None Include="Assets\workflow.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/micha/OneDrive/Documents/GitHub/TheWholeAssGame/ThinkTank/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
