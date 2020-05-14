@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
+    #region singleton
     public static PlayerData Instance;
-
-    private void Awake()
+    void Awake()    //this makes sure that there can only be one existance of it aka dont fuck with it
     {
-        Instance = this;
+        if (Instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
+    #endregion
 
     public enum Zones
     {

@@ -5,11 +5,19 @@ using System.Linq;
 
 public class QuestController : MonoBehaviour
 {
-    #region Instance
+    #region singleton
     public static QuestController Instance;
-    void Awake()
+    void Awake()    //this makes sure that there can only be one existance of it aka dont fuck with it
     {
-        Instance = this;
+        if (Instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
     #endregion
 
