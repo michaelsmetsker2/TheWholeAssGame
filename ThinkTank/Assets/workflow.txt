@@ -8,6 +8,8 @@ collision system
 
 	bugs/im not smart enough to do
 double walking speed diagonal
+getting stuck on walls 
+glitchy textures
 
 	optimization
 having a coroutine for each question in an npc might be a bit much, i should find a way to fix that

@@ -12,8 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87298c04a77810645be9d805a40e2856, type: 3}
   m_Name: aaaaaa
   m_EditorClassIdentifier: 
-  Name: asdfasdfasdfasdf
   Description: Banana
   IconS: {fileID: 21300000, guid: 799b04ea61ffa4b4883b8fbbe948badf, type: 3}
   IconL: {fileID: 21300002, guid: 799b04ea61ffa4b4883b8fbbe948badf, type: 3}
   Amount: 1
+  NoUse:
+    Speaker: 
+    Sentences:
+    - This Item Can't be used
+    HasQuestion: 0
+    Options:
+    - 
+    - 
+    - 
+    - 

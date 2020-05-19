@@ -5,9 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Useless Item", menuName = "Item/Useless")]
 public class UselessItem : Item
 {
+    //keep speaker as null
+    public TalkBlock NoUse;
+
     public override void OnUse()
     {
-        Debug.Log("hey this doesnt do shit nut i havnt added a message to tell the player that");
-        //dont do shit
+        Interpreter.Instance.StartConvo(NoUse);
     }
 }

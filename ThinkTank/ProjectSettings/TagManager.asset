@@ -43,6 +43,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 687093989
+    locked: 0
+  - name: Collidable
+    uniqueID: 3786666871
+    locked: 0
   - name: Objects
     uniqueID: 578037023
     locked: 0

@@ -15,7 +15,8 @@ public class ItemInteract : MonoBehaviour
 
     public void Use()
     {
-        Debug.Log("hey nice job clicking use on this useless item dipshit");
+        GameMenu.Instance.MenuUi.SetActive(false);
+        CurrentItem.OnUse();
     }
 
     //maybe add swap method here?

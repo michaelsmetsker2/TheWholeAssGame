@@ -34,14 +34,14 @@ public class GameMenu : MonoBehaviour
         }
     }
 
-    void Open()
+    public void Open()
     {
         MenuUi.SetActive(true);
         Time.timeScale = 0f;
         IsOpen = true;
     }
 
-    void Close()
+    public void Close()
     {
         MenuUi.SetActive(false);
         Time.timeScale = 1f;
