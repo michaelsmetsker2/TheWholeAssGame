@@ -41,13 +41,13 @@ public class Interpreter : MonoBehaviour
         QText = new Queue<string>();
         QText.Clear();
 
-        //update the name text
-        NameText.text = CurrentBlock.Speaker;
-
         //initialize queue
-        foreach (string Sentence in CurrentBlock.Sentences)
+        foreach (Sentences sentence in CurrentBlock.Sentences)
         {
-            QText.Enqueue(Sentence);
+
+            QText.Enqueue(sentence.Speaker);
+
+            QText.Enqueue(sentence.Text);
         }
 
         TalkBox.SetActive(true);
@@ -65,6 +65,18 @@ public class Interpreter : MonoBehaviour
             MakeChoice();
             return;
         }
+
+        string CurrentSpeaker = QText.Dequeue();
+
+        if (CurrentSpeaker == "Player")
+        {
+            NameText.text = PlayerData.Instance.PlayerName;
+        }
+        else
+        {
+            NameText.text = CurrentSpeaker;
+        }
+
         string CurrentLine = QText.Dequeue();
         ConvoText.text = CurrentLine;
 

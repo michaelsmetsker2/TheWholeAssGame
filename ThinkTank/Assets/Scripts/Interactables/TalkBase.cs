@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class TalkBase : MonoBehaviour
 {
-    public DataBase Data;
+    public DataBase DataQUESTIONMARK;
 
     //maybe store in data?
     public int ConvPlace;
 
     public TalkBlock[] Blocks = new TalkBlock[1];
 
-
     public virtual void Initiate()
     {
-        Debug.LogError("this should be overriten");
+        Interpreter.Instance.StartConvo(Blocks[ConvPlace]);
     }
 }

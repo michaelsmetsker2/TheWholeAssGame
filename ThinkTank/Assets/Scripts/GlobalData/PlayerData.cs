@@ -37,6 +37,8 @@ public class PlayerData : MonoBehaviour
 
     public Zones CurrentZone = Zones.Downtown;
 
+    public string PlayerName;
+
     public int Dollars;
     public int Dennars;
     public int Gold;
