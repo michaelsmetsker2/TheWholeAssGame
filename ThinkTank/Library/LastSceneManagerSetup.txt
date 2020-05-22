@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Scenes/StartingApt/StartingApt.unity
-  isLoaded: 1
-  isActive: 1
